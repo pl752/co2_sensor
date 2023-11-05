@@ -1,5 +1,7 @@
-﻿namespace co2_sensor {
-  partial class Form1 {
+﻿namespace co2_sensor
+{
+  partial class Form1
+  {
     /// <summary>
     ///  Required designer variable.
     /// </summary>
@@ -9,8 +11,10 @@
     ///  Clean up any resources being used.
     /// </summary>
     /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-    protected override void Dispose(bool disposing) {
-      if (disposing && (components != null)) {
+    protected override void Dispose(bool disposing)
+    {
+      if (disposing && (components != null))
+      {
         components.Dispose();
       }
       base.Dispose(disposing);
@@ -22,10 +26,12 @@
     ///  Required method for Designer support - do not modify
     ///  the contents of this method with the code editor.
     /// </summary>
-    private void InitializeComponent() {
+    private void InitializeComponent()
+    {
       components = new System.ComponentModel.Container();
       label1 = new Label();
       timer1 = new System.Windows.Forms.Timer(components);
+      AvgLabel = new Label();
       SuspendLayout();
       // 
       // label1
@@ -44,11 +50,22 @@
       timer1.Interval = 5000;
       timer1.Tick += timer1_Tick;
       // 
+      // AvgLabel
+      // 
+      AvgLabel.AutoSize = true;
+      AvgLabel.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+      AvgLabel.Location = new Point(12, 41);
+      AvgLabel.Name = "AvgLabel";
+      AvgLabel.Size = new Size(58, 32);
+      AvgLabel.TabIndex = 1;
+      AvgLabel.Text = "Avg";
+      // 
       // Form1
       // 
       AutoScaleDimensions = new SizeF(7F, 15F);
       AutoScaleMode = AutoScaleMode.Font;
-      ClientSize = new Size(305, 57);
+      ClientSize = new Size(305, 83);
+      Controls.Add(AvgLabel);
       Controls.Add(label1);
       FormBorderStyle = FormBorderStyle.FixedDialog;
       MaximizeBox = false;
@@ -63,5 +80,6 @@
 
     private Label label1;
     private System.Windows.Forms.Timer timer1;
+    private Label AvgLabel;
   }
 }
